@@ -93,8 +93,8 @@ def rmsle(predict, actual):
     predict = np.array(predict)
     actual = np.array(actual)
 
-    log_predict = np.log(predict + 1)
-    log_actual = np.log(actual + 1)
+    log_predict = np.log1p(predict)
+    log_actual = np.log1p(actual)
 
     difference = log_predict - log_actual
     square_diff = np.square(difference)
