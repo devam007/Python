@@ -31,7 +31,7 @@ class KNN:
         """
         Create a kNN classifier using the given training data and class labels
         """
-        self.data = zip(train_data, train_target)
+        self.data = list(zip(train_data, train_target))
         self.labels = class_labels
 
     @staticmethod
